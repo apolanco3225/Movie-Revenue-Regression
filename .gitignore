@@ -4,3 +4,4 @@ flowers-classification-415314-30b5a2827b5f.json
 *.dvc
 .dvc/config
 .dvc/config
+*.pyc
