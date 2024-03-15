@@ -11,7 +11,8 @@ app.version = "0.0.1"
 @app.post("/v1/prediction", tags=["prediction"], status_code=200)
 def make_model_prediction(request: PredictionRequest):
     prediction = get_prediction(request)
-    return JSONResponse(content=prediction, status_code=200)
+    prediction_dict = {"worldwide_gross": prediction}
+    return JSONResponse(content=prediction_dict, status_code=200)
 
 
 
