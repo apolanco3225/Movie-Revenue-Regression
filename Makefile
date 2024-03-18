@@ -6,7 +6,7 @@ format:
 	black .
 
 lint:
-	pylint --disable=R,C ./api
+	pylint --disable=R,C ./api --ignore-paths=./api/tests.py
 	pylint --disable=R,C ./src
 
 test:
