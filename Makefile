@@ -10,7 +10,7 @@ lint:
 	pylint --disable=R,C ./src
 
 test:
-	pytest tests.py
+	pytest ./api/tests.py
 
 deploy:
 	uvicorn api.main:app --reload
@@ -19,4 +19,4 @@ dockerize:
 	DOCKER_BUILDKIT=1 docker build . -t model-api:v1 &&\
 		docker run -p 8000:8000 model-api:v1
 
-all: install format lint test deploy
+all: install format lint test 
