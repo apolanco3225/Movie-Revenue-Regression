@@ -10,7 +10,7 @@ lint:
 	pylint --disable=R,C ./src
 
 test:
-	pytest ./api/tests.py
+	pytest tests.py
 
 deploy:
 	uvicorn api.main:app --reload
