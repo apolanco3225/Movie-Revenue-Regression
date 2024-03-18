@@ -9,7 +9,7 @@ lint:
 	pylint --disable=R,C ./api --ignore-paths=./api/tests.py
 	pylint --disable=R,C ./src
 
-test:
+test-api:
 	pytest api/tests.py --disable-warnings  
 
 deploy:
