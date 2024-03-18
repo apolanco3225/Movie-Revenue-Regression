@@ -15,7 +15,7 @@ class PredictionRequest(BaseModel):
     class Config:
         """Example data schema."""
 
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "production_budget": 425000000,
                 "title_year": 2009,
