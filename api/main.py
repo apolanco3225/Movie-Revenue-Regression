@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from .app.schemas import PredictionRequest
-from .app.utils import get_prediction
+from .app.utils import get_prediction, PredictionRequest
 
 
 app = FastAPI(docs_url="/")
