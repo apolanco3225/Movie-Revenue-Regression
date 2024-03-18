@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from .app.schemas import PredictionRequest, PredictionResponse
+from .app.schemas import PredictionRequest
 from .app.utils import get_prediction
 
 
