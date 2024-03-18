@@ -6,7 +6,7 @@ import joblib
 import pandas as pd
 from pydantic import BaseModel
 from sklearn.pipeline import Pipeline
-from schemas import PredictionRequest
+from .schemas import PredictionRequest
 
 
 def get_model(
