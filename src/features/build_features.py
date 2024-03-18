@@ -6,9 +6,9 @@ import pandas as pd
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)s:%(name)s: %(message)s",
-    level=logging.INFO, 
+    level=logging.INFO,
     datefmt="%H:%M:%S",
-    stream=sys.stderr
+    stream=sys.stderr,
 )
 
 logger = logging.getLogger(__name__)
@@ -17,7 +17,7 @@ raw_data_folder = "data/raw"
 processed_data_folder = "data/processed"
 
 logger.info("Reading data.")
-movies_data_path  = os.path.join(raw_data_folder, "movies.csv")
+movies_data_path = os.path.join(raw_data_folder, "movies.csv")
 financial_data_path = os.path.join(raw_data_folder, "financials.csv")
 opening_data_path = os.path.join(raw_data_folder, "opening_gross.csv")
 

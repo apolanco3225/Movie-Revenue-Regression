@@ -14,8 +14,8 @@ class PredictionRequest(BaseModel):
 
     class Config:
         """Example data schema."""
-        schema_extra = {
 
+        schema_extra = {
             "example": {
                 "production_budget": 425000000,
                 "title_year": 2009,
@@ -24,12 +24,11 @@ class PredictionRequest(BaseModel):
                 "cast_total_facebook_likes": 4834,
                 "budget": 237000000.0,
                 "imdb_score": 7.9,
-                "opening_gross": 77025481.0 ,
+                "opening_gross": 77025481.0,
                 "screens": 3452.0,
             }
         }
-    
+
 
 class PredictionResponse(BaseModel):
     worldwide_gross: float
-

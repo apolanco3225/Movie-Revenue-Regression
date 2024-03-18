@@ -1,4 +1,4 @@
-import os 
+import os
 import sys
 import joblib
 import logging
@@ -10,9 +10,9 @@ from sklearn.impute import SimpleImputer
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)s:%(name)s: %(message)s",
-    level=logging.INFO, 
+    level=logging.INFO,
     datefmt="%H:%M:%S",
-    stream=sys.stderr
+    stream=sys.stderr,
 )
 
 logger = logging.getLogger(__name__)
@@ -29,7 +29,7 @@ processed_data_folder = "data/processed"
 data_path = os.path.join(processed_data_folder, "data.csv")
 data = pd.read_csv(data_path)
 labels = data.pop("worldwide_gross")
-features = data 
+features = data
 
 logger.info("Selecting sample and preprocessing.")
 sample = features.iloc[0, :]
