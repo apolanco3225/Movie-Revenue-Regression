@@ -35,13 +35,13 @@ for path in file_paths:
 
     try:
         data = pd.read_csv(path)
-    except:
+    except FileNotFoundError:
         trouble_files.append(path)
-        logging.error(f"An error has occurred while reading {path}")
+        logging.error("An error has occurred while reading %s", path)
 
     finally:
-        logging.info(f"File located in {path} read successfully.")
+        logging.info("File located in %s read successfully.", path)
 
 
 if len(trouble_files) > 0:
-    logging.error(f"The following paths couldn't be read: {trouble_files}")
+    logging.error("The following paths couldn't be read: %s", trouble_files)
