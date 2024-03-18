@@ -1,7 +1,14 @@
+"""
+Define data schema for input and output in API
+"""
 from pydantic import BaseModel
 
 
 class PredictionRequest(BaseModel):
+    """
+    Define data schema for API
+
+    """
     production_budget: int
     title_year: int
     aspect_ratio: float
@@ -31,4 +38,7 @@ class PredictionRequest(BaseModel):
 
 
 class PredictionResponse(BaseModel):
+    """
+    Create data schema for prediction output.
+    """
     worldwide_gross: float
